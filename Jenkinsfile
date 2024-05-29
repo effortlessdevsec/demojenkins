@@ -2,6 +2,9 @@
 
 pipeline {
     agent any
+    tools {
+        docker: Docker
+    }
     stages {
         stage ("Docker Pull Dastardly from Burp Suite container image") {
             steps {
